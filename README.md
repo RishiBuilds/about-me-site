@@ -23,6 +23,7 @@ This site acts as a central hub for my work, online profiles, and professional i
 ## Project Structure
 
 about-me-site
+.
 ├── index.html
 ├── style.css
 ├── script.js
@@ -30,6 +31,8 @@ about-me-site
 │ ├── dev-profile.png
 │ └── favicon.ico
 └── README.md
+
+---
 
 ## Live Preview
 
@@ -47,7 +50,7 @@ Visit the live site: [about-me-site](about-me-site-mysocialhub.netlify.app)
 
 ---
 
-## How to UseLicense
+## How to Use
 
 1. Clone the repository
    ```bash
