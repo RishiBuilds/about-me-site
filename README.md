@@ -22,18 +22,18 @@ This site acts as a central hub for my work, online profiles, and professional i
 
 ## Project Structure
 
-about-me-site/
+about-me-site
 ├── index.html
 ├── style.css
 ├── script.js
 ├── assets/
-│   ├── dev-profile.png
-│   └── favicon.ico
+│ ├── dev-profile.png
+│ └── favicon.ico
 └── README.md
 
 ## Live Preview
 
-Visit the live site: about-me-site-mysocialhub.netlify.app
+Visit the live site: [about-me-site](about-me-site-mysocialhub.netlify.app)
 
 ---
 
@@ -50,6 +50,7 @@ Visit the live site: about-me-site-mysocialhub.netlify.app
 ## How to UseLicense
 
 1. Clone the repository
+   ```bash
    git clone https://github.com/RishiBuilds/about-me-site.git
    cd about-me-site
 2. Open `index.html` in your browser
@@ -58,7 +59,7 @@ Visit the live site: about-me-site-mysocialhub.netlify.app
 
 ## License
 
-This project is open source and available under the MIT License. Feel free to use this as a template for your own portfolio site!
+This project is open source and available under the MIT License. See the [LICENSE](https://github.com/RishiBuilds/about-me-site/main/LICENSE) file for details.
 
 ---
 
@@ -76,6 +77,3 @@ Rishi Chaurasia
 Visit now:[about-me-site](https://about-me-site-mysocialhub.netlify.app/)
 
 ---
-
-
-
