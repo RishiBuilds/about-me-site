@@ -18,24 +18,29 @@ This site acts as a central hub for my work, online profiles, and professional i
 
 - **HTML5**, **CSS3**,  **JavaScript** 
 
+---
 
 ## Project Structure
 
-about-me-site/
-│
+```about-me-site
+.
 ├── index.html
 │   
 ├── style.css
 │
 ├── script.js
 │
-├── assets
+├──  assets
 │   ├── dev-profile.png
 │   └── favicon.ico
 │
+├── .gitignore
 ├── LICENSE
 └── README.md
 
+```
+
+---
 
 ## Live Preview
 
