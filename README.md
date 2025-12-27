@@ -88,3 +88,9 @@ Rishi Chaurasia
 Visit now:[about-me-site](https://about-me-site-mysocialhub.netlify.app/)
 
 ---
+
+
+**Created by [Rishi](https://github.com/RishiBuilds)** with ❤️
+
+
+Feel free to fork the repo, open issues, or submit pull requests!
