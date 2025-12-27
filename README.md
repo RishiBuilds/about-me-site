@@ -22,14 +22,19 @@ This site acts as a central hub for my work, online profiles, and professional i
 
 ## Project Structure
 
-about-me-site
-.
+about-me-site/
+│
 ├── index.html
+│   
 ├── style.css
+│
 ├── script.js
-├── assets/
-│ ├── dev-profile.png
-│ └── favicon.ico
+│
+├── assets
+│   ├── dev-profile.png
+│   └── favicon.ico
+│
+├── LICENSE
 └── README.md
 
 ---
