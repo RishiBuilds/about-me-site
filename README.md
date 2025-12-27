@@ -10,7 +10,7 @@ This site acts as a central hub for my work, online profiles, and professional i
 - Social & contact links
 - Smooth hover effects and subtle animations
 - SEO-friendly structure
-- Fully responsive for desktop, table, mobile
+- Fully responsive for desktop, tablet, mobile
 
 ---
 
