@@ -36,8 +36,7 @@ about-me-site
 │   ├── dev-profile.png
 │   └── favicon.ico
 │
-├── .gitignore
-├── LICENSE
+│── LICENSE
 └── README.md
 
 ```
