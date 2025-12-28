@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const navbar = document.querySelector('.navbar');
           const navbarHeight = navbar ? navbar.offsetHeight : 0;
 
-          const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+          const targetPosition = targetElement.offsetTop - navbarHeight - 2;
 
           window.scrollTo({
             top: targetPosition,

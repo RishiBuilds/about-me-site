@@ -1,11 +1,12 @@
 :root {
-  --bg-dark: #1a1a1a;
-  --bg-card: #2a2a2a;
-  --text-light: #e0e0e0;
-  --text-muted: #a0a0a0;
-  --accent: #6bb8ff;
-  --accent-hover: #87cdff;
-  --transition-speed: 0.3s;
+  --bg-dark: #0a0a0f;
+  --bg-gradient: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+  --bg-card: rgba(25, 25, 40, 0.6);
+  --text-light: #f0f0f5;
+  --text-muted: #9ca3af;
+  --accent: #F59E0B;
+  --accent-glow: rgba(245, 158, 11, 0.28);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -15,24 +16,26 @@
 }
 
 body {
-  background-color: var(--bg-dark);
+  background: var(--bg-gradient);
   color: var(--text-light);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 .navbar {
   position: fixed;
   width: 100%;
-  background: rgba(26, 26, 26, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(20px);
   padding: 1rem 0;
   top: 0;
   left: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(0, 212, 212, 0.1);
-  transition: transform 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.1);
+  transition: transform var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar ul {
@@ -50,7 +53,7 @@ body {
   color: var(--text-light);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  transition: color var(--transition-speed);
+  transition: all var(--transition);
   font-weight: 500;
   font-size: 0.95rem;
   position: relative;
@@ -61,6 +64,7 @@ body {
 .navbar a:focus {
   color: var(--accent);
   outline: none;
+  text-shadow: 0 0 20px var(--accent-glow);
 }
 
 .navbar a.active {
@@ -98,11 +102,19 @@ body {
 }
 
 .section {
-  background-color: var(--bg-card);
-  border-radius: 12px;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
   padding: 3rem 2.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   margin-bottom: 2rem;
+  border: 1px solid rgba(96, 165, 250, 0.1);
+  transition: all var(--transition);
+}
+
+.section:hover {
+  border-color: rgba(96, 165, 250, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(96, 165, 250, 0.1);
 }
 
 .section:first-of-type {
@@ -115,6 +127,7 @@ h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 1rem 0 0.5rem;
+  text-shadow: 0 0 30px var(--accent-glow);
 }
 
 h2 {
@@ -136,9 +149,16 @@ h3 {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--accent);
+  border: 3px solid var(--accent);
   display: block;
   margin: 0 auto;
+  box-shadow: 0 0 40px var(--accent-glow), 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition);
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px var(--accent-glow), 0 12px 32px rgba(0, 0, 0, 0.5);
 }
 
 .loc {
@@ -174,29 +194,40 @@ h3 {
 .links a {
   color: var(--text-light);
   font-size: 1.5rem;
-  transition: all var(--transition-speed);
+  transition: all var(--transition);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
+  border-radius: 8px;
 }
 
 .links a:hover,
 .links a:focus {
   color: var(--accent);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   outline: none;
+  background: rgba(96, 165, 250, 0.1);
+  box-shadow: 0 4px 20px var(--accent-glow);
 }
 
 .project-item {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(96, 165, 250, 0.05);
+  border-radius: 12px;
+  border-left: 3px solid var(--accent);
+  transition: all var(--transition);
+}
+
+.project-item:hover {
+  background: rgba(96, 165, 250, 0.08);
+  transform: translateX(8px);
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.15);
 }
 
 .project-item:last-child {
-  border-bottom: none;
   margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .project-item p {
@@ -212,19 +243,21 @@ h3 {
 }
 
 .skill-label {
-  background-color: rgba(0, 212, 212, 0.1);
+  background: rgba(96, 165, 250, 0.1);
   color: var(--text-light);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 24px;
   font-size: 0.9rem;
-  border: 1px solid rgba(0, 212, 212, 0.3);
-  transition: all var(--transition-speed);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  transition: all var(--transition);
+  cursor: default;
 }
 
 .skill-label:hover {
-  background-color: rgba(0, 212, 212, 0.2);
+  background: rgba(96, 165, 250, 0.15);
   border-color: var(--accent);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px var(--accent-glow);
 }
 
 #meet {
@@ -240,30 +273,42 @@ h3 {
 
 .contact-button {
   display: inline-block;
-  background-color: var(--accent);
-  color: var(--bg-dark);
-  padding: 0.75rem 2rem;
-  border-radius: 25px;
+  background: var(--accent);
+  color: #0a0a0f;
+  padding: 0.85rem 2.5rem;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: all var(--transition-speed);
+  transition: all var(--transition);
   border: 2px solid var(--accent);
+  box-shadow: 0 4px 20px var(--accent-glow);
 }
 
 .contact-button:hover,
 .contact-button:focus {
-  background-color: transparent;
+  background: transparent;
   color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 212, 212, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px var(--accent-glow);
   outline: none;
 }
 
 .footer {
   margin-top: 2rem;
+  padding: 1.5rem 0;
   font-size: 0.9rem;
-  color: #888;
+  color: var(--text-muted);
   text-align: center;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.footer a:hover {
+  text-shadow: 0 0 20px var(--accent-glow);
 }
 
 
