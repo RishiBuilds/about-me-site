@@ -1,8 +1,9 @@
 ## About Me Site
 
-A **personal profile website** showcasing my digital presence, projects, skills, and social links
-using HTML,CSS and JS.
-This site acts as a central hub for my work, online profiles, and professional identity.
+A **personal profile site** designed to showcase my **digital presence, projects, technical skills, and social profiles**, including **GitHub, LeetCode, X (formerly Twitter), Instagram**, and more. built with **HTML, CSS, and JS**
+
+
+This site acts as a **central hub** for my work, online profiles, and **professional identity**.
 
 ---
 
@@ -22,7 +23,8 @@ This site acts as a central hub for my work, online profiles, and professional i
 
 ## Project Structure
 
-```about-me-site
+about-me-site
+```
 .
 ├── index.html
 │   
